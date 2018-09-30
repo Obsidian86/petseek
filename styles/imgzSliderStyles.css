@@ -1,0 +1,22 @@
+/*imgzSlider styles*/
+#imgzSlider { position: relative; }
+.imgzBtn {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border: none; 
+  padding: 5px 10px;
+  cursor: pointer; 
+  background-color: rgba(255,255,255,.1);
+  color: #c3c3c3;
+}
+#imgzSlider:hover .imgzBtn{ 
+  background-color: rgba(255,255,255,.4); 
+  color: #fff;
+}
+.slidezImage{ display: none; }
+.selectedImage{ display: block; width: 100%; } 
+#imgNumbers{ 
+  font-size: 1em; 
+}
+/*imgzSlider styles*/

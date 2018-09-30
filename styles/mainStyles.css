@@ -1,0 +1,335 @@
+.content{ 
+    width: 90%;
+    max-width: 1300px; 
+    margin: 0 auto;
+    font-size: 12px; 
+}
+select{
+    border-radius: 5px;
+    border: none;
+    padding: 8px 8px;
+} 
+.clearIt{
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    clear: both;
+}
+/* HEADER */
+header{
+    background-color: #009643; 
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.navbar-brand{
+    font-size: 1em;
+    border: 2px solid #a7f2b4;
+    padding: 3px 13px;
+    color: #a7f2b4;
+    border-radius: 12px;
+}
+.navbar-brand:hover{
+    color: #fff;
+    border-color: #fff;
+    background-color: #009643;
+}
+
+/* Banner spread */
+.sep{  
+    margin-bottom: 9vh;
+}
+.backDrop{
+    background-image: url("../images/splashfam.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+} 
+.mainSearch{  
+    text-align: center; 
+    margin: 0; 
+    border-radius: 0;
+    font-size: 1.1em;
+}
+.mainSearch h2{
+    padding-top: 90px;
+    font-size: 4em; 
+    color: #009643; 
+    font-weight: bold;
+} 
+.mainSearch p, .mainSearch label{
+    text-shadow: 1px 1px 0 #f2f2f2;
+    color: green;
+    font-size: 1.2em;
+}
+.zipCont{
+    display: flex; 
+}
+.zipCont div{  
+    width: 50%;
+}
+.selectPet{ 
+    width: 100%;
+    border-right: 2px solid #009643;
+}
+.selectPet div{
+    width: 100%; 
+}
+.selectPet img{
+    width: 60px;
+    height: 60px; 
+    background-color: #666;
+    background-color: rgba(100, 100, 100, .3);
+    padding: 20px 0; 
+    cursor: pointer;
+    border-radius: 50%; 
+    border: 1px solid #fff;
+}
+.selectPet img:hover{
+    background-color: rgba(100, 100, 100, .8); 
+}
+.selectPet .chosen{ 
+    background-color: #009643;
+    background-color: rgba(0, 150,  67, .5);  
+} 
+#zCode{
+    font-size: 1.3em; 
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 3px solid #009643;
+} 
+#zip_error{ 
+    color: red; 
+    font-weight: bold; 
+    display: none; 
+}
+.searchOptions{  
+    color: #fff; 
+    background-color: #009643;
+    width: 80%;
+    max-width: 1300px;  
+    border-radius: 15px;
+    padding: 10px 0;
+    margin: 11vh auto;
+}
+.form-row div{
+    width: 30%; 
+} 
+.searchOptions label{
+    margin-right: 15px; 
+    font-weight: bold; 
+    padding-top: 5px;
+    margin-left: 20px; 
+    color: #fff;
+    text-shadow: none;
+}
+
+
+/* Pet results */
+#mainBody{ 
+    display: none; 
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px; 
+    animation: fadein 1s;
+    margin-top: 20px;
+}
+#pet{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+.petCard{
+    width: 23%; 
+    margin: .5% 1%;
+    border: 1px solid #fff;
+    box-shadow: 0 0 1px gray;
+    border-radius: 5px; 
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    min-width: 230px;
+}
+.petCard .petLink{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font-size: 1.7em;
+    padding-top: 50%;   
+    background-color: #fff;
+    background-color: rgba(255, 255,  255, .8);
+    animation: fadein .5s;
+    display: none;
+    text-decoration: none;
+    color: #fff;
+}
+.petCard:hover .petLink{
+    display: block;
+}
+.petLink span{
+    border: 3px solid green;
+    display: block; 
+    width: 50%; 
+    padding: 7px 0;
+    margin: 0 auto;
+    background-color: green;
+    border-radius: 4px;
+}
+#pet .petImage{
+    width: 100%;
+    height: 200px;
+    background-position: center; 
+    background-size: cover;
+    border-top: 5px solid #009643;
+    background-color: #c2c2c2;  
+} 
+.petName{
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-top: 6px;
+    padding-left: 6px;
+    margin-bottom: 5px;
+    color: #666;
+} 
+.descr{
+    padding: 6px; 
+    color: #666; 
+    font-style: italic;
+    font-size: 1.2em;
+}
+.pageControls{
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+}
+.pageControls .btn{
+    margin: 10px;
+}
+#prevPage{
+    display: none;
+} 
+
+#shadow, #shadowImg{ 
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: none;
+}
+#shadowImg{ 
+    background-image: url('../images/splash.jpg');
+    z-index: 1;
+    background-size: cover;
+    background-position: bottom;
+}
+#shadow{
+    background-color: rgba(0,0,0,.6);
+    z-index: 2;
+}
+#viewPet{ 
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    display: none;
+    padding-top: 60px; 
+    position: fixed;  
+} 
+.vpdescr{
+    background-color: #e2e2e2;
+    color: #666;
+    font-size: .9em;
+    float: right; 
+    width: 55%;
+    padding: 10px; 
+    text-align: center; 
+    border-radius: 10px;
+}
+#petContent{
+    color: #fff;  
+    padding: 10px; 
+    position: relative;
+    font-size: 1.2em;  
+}
+#imgzGallery{
+    width: 40%; 
+    max-height: 600px; 
+    float: left; 
+    overflow: hidden;
+} 
+#petContent ul{
+    padding: 0;
+    display: flex; 
+    margin: 25px 0;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+ }
+ #petContent ul li{ 
+    list-style-type: none; 
+    padding-right: 25px; 
+}
+#closeBtn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+} 
+
+@media only screen and (max-width: 1190px) {
+    .petCard{ width: 30.66%; }
+    #viewPet{ padding-top: 5px;}
+}
+@media only screen and (max-width: 900px) {
+    .petCard{ width: 45%; }
+    #imgzGallery{ margin: 0 auto; }
+    .vpdescr{ font-size: 1em; }
+    #petContent ul li{ width: 50%; }
+    .form-row{ width: 100%;}
+    .form-row div{ width: 33.33%; }
+    .form-row div label{ width: 100%; text-align: center; padding: 0; margin: 0 auto 10px auto; }
+}
+@media only screen and (max-width: 610px) {
+    
+    #mainBody{ 
+        padding: 8px 0; 
+        width: 100%; 
+        border-radius: 0;
+    }
+    .sep{ margin: 0 auto 30px auto;}
+    .sep h2{ font-size: 3em; }
+    .petCard{
+        width: 95%;
+        margin: 10px auto;
+    }
+    .petCard .petLink{ padding-top: 45%; }
+
+    .zipCont{  
+        width: 100%; 
+        flex-direction: column;
+        font-size: 1em;
+    }
+    .zipCont div{  
+        width: 100%;
+        padding-bottom: 20px;
+        border: none;
+    }
+    
+    #imgzGallery, #viewPet, #viewPet .content{ width: 100%;}
+    .vpdescr{ 
+        width: 100%; 
+        margin-top: 40px; 
+    }
+    #petContent ul li{ width: 100%; } 
+    #viewPet{ position: absolute; top: 900px; }
+}
+#mbContainer {width: 100%}

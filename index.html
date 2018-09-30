@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pet Search</title> 
+        <meta charset="utf-8" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="styles/imgzSliderStyles.css" type="text/css" />
+        <link rel="stylesheet" href="styles/mainStyles.css" type="text/css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="/pets"> PetSeek </a>
+                </div>
+              </div>
+            </nav>
+        </header>
+        <section id="viewPet"> <div class="content" id="petContent"> <h1> VIEWING PET</h1> </div> </section>
+        <div id="shadowImg"></div>
+        <div id="shadow"></div> 
+        <div id="mbContainer">
+            <section class="backDrop"></section>
+            <section class="mainSearch">
+                <div class='sep'>
+                    <h2>Find your newest family member!</h2>
+                </div>  
+                <div class="zipCont content sep">
+                    <div class="selectPet">
+                        <p><strong>What kind of pet are you looking for?</strong></p>
+                        <div>
+                            <img src="images/dog.svg" alt="Select dog for pet" class="chosen" onclick="chooseAnimal('dog')" id="choosedog"> 
+                            <img src="images/cat.svg" alt="Select cat for pet" onclick="chooseAnimal('cat')" id="choosecat">
+                        </div>
+                    </div>
+                    <div> 
+                        <p><strong>What area are you in?</strong></p>
+                        <input type='text' placeholder='zip code' id='zCode'>
+                        <p id="zip_error">Invalid zipcode</p>
+                    </div>
+                </div>
+                <div class='searchOptions sep'>
+                    <div class='content'> 
+                        <div class='form-row'> 
+                            <div> 
+                            <label for="age">Age</label>
+                            <select class="inputWatch" id="age">
+                                <option name="" value="">All</option>
+                                <option name="" value="Baby">Baby</option>
+                                <option name="" value="Young">Young</option>
+                                <option name="" value="Adult">Adult</option>
+                                <option name="" value="Senior">Senior</option>
+                            </select>
+                            </div>
+                            <div>
+                            <label for="size">Size</label>
+                            <select class="inputWatch" id="size">
+                                <option name="size" value="">All</option>
+                                <option name="size" value="S">Small </option>
+                                <option name="size" value="M">Medium </option>
+                                <option name="size" value="L">Large</option>
+                                <option name="size" value="XL">Extra Large</option>
+                            </select>
+                            </div>
+                            <div>
+                            <label for="size">Sex</label>
+                            <select class="inputWatch" id="sex">
+                                <option name="sex" value="">Any</option>
+                                <option name="sex" value="M">Male</option>
+                                <option name="sex" value="F">Female</option>
+                            </select>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> 
+                <div class="sep">
+                    <button id="submitBtn" class="btn btn-success btn-md">Search!</button>
+                </div>
+            </section>
+            
+            <section>
+                <div class='content' id="mainBody">
+                    <div id="pet"></div> 
+                    <div class="pageControls">
+                        <a href="#" id="prevPage" class='btn btn-success'>Previous Page</a>
+                        <a href="#" id="nextPage" class='btn btn-success'>Next Page</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script type="text/javascript" src="tempData.js"></script>
+        <script src="scripts/imgzSliderScripts.js"></script>
+        <script src="scripts/mainJs.js"></script>
+    </body>
+</html>
