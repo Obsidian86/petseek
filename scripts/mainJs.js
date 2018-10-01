@@ -4,7 +4,6 @@ let submitBtn = document.getElementById("submitBtn");
 const env = "testx";
 
 let SearchCriteria = {
-    format: "json",
     animal: "dog",
     output: "full",
     callback: "revealpet",
@@ -113,8 +112,8 @@ function makeSearch() {
             url += Object.keys(SearchCriteria)[i] + "=" + SearchCriteria[Object.keys(SearchCriteria)[i]]; 
         }
     }  
-    
-    fetch(`https://petseek.herokuapp.com`, {
+    let callUrl = `https://petseek.herokuapp.com`;
+    fetch(callUrl, {
         method: "post",
         headers: {
             'Accept': 'application/json',
