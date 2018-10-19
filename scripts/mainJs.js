@@ -104,6 +104,16 @@ function revealpet( data ){
  
 /////// MAKES THE SEARCH
 function makeSearch() {
+
+    submitBtn.innerHTML = "Finding your pet"; 
+    submitBtn.style.border = "3px solid lightgreen";
+    let loadDots = ".";
+    let timer = setInterval(()=>{
+        submitBtn.innerHTML = `Finding your pet${loadDots}`;
+        loadDots += "."
+        if(loadDots.length > 6){ loadDots = "."};
+    }, 200);
+
    let url = "https://api.petfinder.com/pet.find?"; 
     //Builds the url with all the search params
     for(let i=0; i< Object.keys(SearchCriteria).length; i++ ){ 
@@ -115,16 +125,19 @@ function makeSearch() {
     let callUrl = `https://petseek.herokuapp.com`;
     fetch(callUrl, {
         method: "post",
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
         body: JSON.stringify({petUrl: url})
     })
         .then(resp => resp.json())
-        .then( resp => revealpet(resp));
+        .then( resp => { 
+            clearInterval(timer);
+            submitBtn.innerHTML = "Search!"; 
+            submitBtn.style.border = "none";
+            revealpet(resp)
+        });
 
     document.getElementById("prevPage").style.display = SearchCriteria.offset > 0 ? "block" : "none";
+    
 }
 
 /////////////////////// SHOW PET ///////////////
