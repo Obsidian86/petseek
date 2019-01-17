@@ -259,9 +259,7 @@ header{
 }
 #imgzGallery{
     width: 40%; 
-    max-height: 600px; 
     float: left; 
-    overflow: hidden;
 } 
 #petContent ul{
     padding: 0;

@@ -45,6 +45,7 @@ class gallerySet{
         this.target.innerHTML = setBuild + `
             <button class='imgzBtn'>Next</button>
             </div>
+            <p class='clearIt'></p>
             <p id='imgNumbers'>
                 Image 
                 <span id='imgzCount'>1</span> 

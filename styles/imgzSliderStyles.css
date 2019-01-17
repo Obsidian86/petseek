@@ -1,5 +1,9 @@
 /*imgzSlider styles*/
-#imgzSlider { position: relative; }
+#imgzSlider { 
+  position: relative; 
+  overflow: hidden;
+  max-height: 600px;
+}
 .imgzBtn {
   position: absolute;
   top: 0;
